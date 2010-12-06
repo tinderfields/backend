@@ -1,0 +1,39 @@
+#content_wrapper{ padding-bottom:40px; }
+
+/***************** text ******************/
+.content .title{  background-image:url('/backend/images/content_title_bg.png'); }
+
+/********************* header menu *****************/
+#header_wrapper ul .home a span{ background-image:url('/backend/images/home.gif'); }
+#header_wrapper ul li a{ height:20px; }
+#header_wrapper ul li a .badge{ border-width:1px; }
+
+
+/***************** main menu *********************/
+#main_menu li .title{ background:none; background-color:#eee; color:#000; font-weight:bold; }
+#main_menu li ul li a{ padding-top:6px; padding-bottom:6px; height:20px; }
+#main_menu li ul li a .badge{ display:inline; float:none; }
+
+#main_menu li ul li a .badge{ background:none; background-color:#eee; color:#000; border:solid 1px #ccc; margin-left:5px; }
+
+
+/**************** nice table ******************/
+.nice_table { width:98%; }
+
+
+/* buttons! */
+.button, .input_button{ background:none; background-color:#eee; }
+.button{ position:relative; top:-1px; padding-top:4px; }
+.input_button{ padding-top:6px; padding-bottom:2px; }
+.input_button:hover, .button:hover{ background-color:#ddd; }
+.input_button:active, .button:active{ background:none; background-color:#ccc; position:relative; }
+.submit_button, .submit_button:hover{ background:none; color:#fff; background-color:#415a84; }
+.delete{ background-color:#df0202; background-repeat:repeat-x; background-image:url('/backend/images/button_delete_bg.png'); background-position:bottom left; color:#fff;  }
+.delete:hover, .delete:focus, .delete:active{ background-color:#ae0000; }
+
+/* icons */
+.content .download_icon span{ left:10px; top:-1px; }
+
+/* fastlook */
+#fastlook_box #fastlook_frame{ display:inline; }
+.nice_form .checkbox .input_checkbox{ position:relative; top:1px; }
