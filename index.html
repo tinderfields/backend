@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Backend</title>
+		<link rel="stylesheet" type="text/css" href="/backend/stylesheets/master.css" />
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/backend/stylesheets/ie6.css" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/backend/stylesheets/ie7.css" /><![endif]-->
+		<!--[if IE 8]><link rel="stylesheet" type="text/css" href="/backend/stylesheets/ie8.css" /><![endif]-->
+		<script src="/backend/javascripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<script src="/backend/javascripts/ckeditor/ckeditor.js" type="text/javascript"></script>
+		<script src="/backend/javascripts/ckeditor/adapters/jquery.js" type="text/javascript"></script>
+		<script src="/backend/javascripts/admin.js" type="text/javascript"></script>
+	</head>
+	<body>		
+		
+		<div id="ajax_loading" style="display:none;" >
+			<img src="/backend/images/ajax_loader.gif" alt="Look at this spinner while stuff happens." /><span>Loading...</span>
+		</div>
+		
+		<div id="header_wrapper">
+			<div id="backend_title">
+				<span>Admin Area</span><!-- or use a logo? -->
+			</div>
+			<ul id="header_menu">
+				<li class="icon home" ><a href=""  title="Admin Home"  ><span></span></a></li>
+				<li class="icon back pill_left" ><a href="" class="javascript_back" ><span></span></a></li>
+				<li class="icon forwards pill_right" ><a href="" class="javascript_forwards" ><span></span></a></li>
+				
+				<!-- li><a href="">Menu One<span class="badge">3</span></a></li>
+				<li><a href="">Menu Two</a></li>
+				<li><a href="">Menu Three</a></li -->
+				
+				<li class="right icon logout" ><a href="#" ><span>Logout</span></a></li>
+			</ul>
+		</div>
+		<div id="container">
+			<div id="menu_wrapper">
+				<!-- actions -->
+				<ul id="main_menu">
+					<li>
+						<a class="title">Pages</a>
+						<ul>
+							<li class="on" ><a href=""><span class="icon list"></span>List Things<span class="badge">100</span></a></li>
+							<li><a href=""><span class="icon list"></span>List Things<span class="badge">100</span></a></li>
+							<li><a href=""><span class="icon filter"></span>Filtered List of Things</a></li>
+							<li><a href=""><span class="icon add"></span>Add / New Thing</a></li>
+							<li><a href=""><span class="icon download"></span>Download Thing</a></li>
+							<li><a href=""><span class="icon upload"></span>Upload Thing</a></li>
+							<li><a href=""><span class="icon gallery"></span>Gallery / Media</a></li>
+							<li><a href=""><span class="icon users"></span>Users</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="content_wrapper">
+				
+					<!-- messages -->
+					<div id="flash_messages">
+						<!-- flashed messages go here -->
+						<div class="message">This is a default info message.</div>
+						<div class="message ok">This is an ok message.</div>
+						<div class="message error">This is a error.</div>
+						<div class="message warning">This is a warning.</div>
+					</div>
+					
+					<!-- content -->
+					<div class="content" >
+						<h1 class="title">Nice Form</h1>
+						
+						<form class="nice_form" action="/">
+							<fieldset>
+								<legend>Form Legend Title</legend>
+								
+								<div class="input text">
+									<label>Text Input:</label>
+									<input type="text" />
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet arcu nec nibh scelerisque iaculis. Donec vitae est quis ligula ultrices gravida non sit amet enim.</p>
+								</div>
+								
+								<div class="input select">
+									<label>Select:</label>
+									<select><option>Select an option:</option></select>
+								</div>
+								
+								<div class="input file">
+									<label>File:</label>
+									<input type="file" />
+								</div>
+								
+								<div class="input">
+									<label>Current image:</label>
+									<img src="/backend/images/no_image.jpg" alt="no image" class="fancy_frame" />
+									<a href="/backend/images/example_large.jpg" class="fastlook"><img src="/backend/images/example_small.jpg" alt="no image" class="fancy_frame" /></a>									
+									<a href="" class="small button confirm">Delete Image</a>
+								</div>
+								
+								
+								<div class="input buttons">
+									<label>Current file:</label>
+									<a href="" class="small icon download_icon">Download Filename.pdf</a>
+									<a href="" class="small confirm">Delete File</a>
+								</div>								
+								
+								<div class="input radios">
+									<label>Radios:</label>
+									<input type="radio" name="sex" value="male" />Male
+									<input type="radio" name="sex" value="female" />Female
+								</div>
+								
+								<div class="input checkbox">
+									<input type="checkbox" name="vehicle" value="Car" id="xxxxxxxx" />
+									<label>Checkbox</label>
+								</div>
+								
+								<div class="show_when_xxxxxxxx_is_checked hidden_form_area">
+									<div class="input select">
+										<label>Select:</label>
+										<select><option>Select an option:</option></select>
+									</div>
+									<div class="input select">
+										<label>Select:</label>
+										<select><option>Select an option:</option></select>
+									</div>
+									<div class="input select">
+										<label>Select:</label>
+										<select><option>Select an option:</option></select>
+									</div>
+								</div>
+								
+								<div class="input textarea">
+									<label>Ckeditor</label>
+									<textarea class="do_ckeditor"  rows="2" cols="2" id="x" name="x"></textarea>
+								</div>
+								
+								<div class="input textarea">
+									<label>Textarea:</label>
+									<textarea rows="2" cols="2"></textarea>
+								</div>								
+							</fieldset>
+							
+							<div class="input submit">
+								<input type="submit" value="Submit" />
+							</div>
+							
+						</form>
+					</div>
+					
+
+					<div class="content" >
+						<h1 class="title">Form Elements</h1>
+						<label>Enter your something:</label> 
+						<input type="text" />
+						<select><option>Select an option:</option></select>
+						<input type="button" value="Form Button" />
+						<a href="" class="button">Link Button</a>
+						<input type="submit" value="Submit Button" />
+						<a href="" class="button confirm" title="This will remove the thing, you can't undo this.">Remove Thing</a>
+						<br /><br />
+						<textarea rows="2" cols="2"></textarea>
+					</div>
+				
+				
+					<div class="content" >
+						
+						<h1 class="title">Example Table</h1>
+						
+						<table>
+							<tr>
+								<th>Name</th>
+								<th class="on asc">
+									<a href="#">Price</a>
+								</th>
+								<th>Published</th>
+								<th>Actions</th>
+							</tr>
+							
+							<tr>
+								<td>Willam Paginate</td>
+								<td>&pound;100</td>
+								<td>Yes</td>
+								<td class="buttons">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</td>
+							</tr>
+							<tr class="alt">
+								<td>Willam Paginate</td>
+								<td>&pound;100</td>
+								<td>Yes</td>
+								<td class="buttons">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</td>
+							</tr>
+						</table>
+						
+						<div class="pagination">
+							<a class="prev" href="">&nbsp;</a>
+							<a class="on" href="">1</a>
+							<a href="">2</a>
+							<a href="">3</a>
+							<a href="">4</a>
+							<a class="next" href="">&nbsp;</a>
+						</div>
+						
+					</div>
+				
+					
+					<!-- content -->
+					<div class="content" >
+					
+						<h1 class="title">Welcome to Backend, this is a h1 with class the "title"</h1>
+					
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nibh a erat malesuada luctus. Morbi vestibulum quam ut metus 
+						euismod vitae pellentesque mauris auctor. In suscipit erat sed augue egestas laoreet. Etiam ultricies interdum volutpat. 
+						Vivamus tincidunt, diam in condimentum fermentum, augue mi vestibulum quam, ac adipiscing leo augue sit amet erat. 
+						Donec hendrerit sodales sem dapibus ultricies. Donec mauris nisl, condimentum sed scelerisque quis, laoreet tincidunt nisl. 
+						<a href="#">This is a link</a>
+						</p>
+						
+						<h1>This is a normal h1</h1>
+						
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nibh a erat malesuada luctus. Morbi vestibulum quam ut metus 
+						euismod vitae pellentesque mauris auctor. In suscipit erat sed augue egestas laoreet. Etiam ultricies interdum volutpat. 
+						Vivamus tincidunt, diam in condimentum fermentum, augue mi vestibulum quam, ac adipiscing leo augue sit amet erat. 
+						Donec hendrerit sodales sem dapibus ultricies. Donec mauris nisl, condimentum sed scelerisque quis, laoreet tincidunt nisl. 
+						<a href="#">This is a link</a>
+						</p>
+					
+						<h2>This is a h2 subtitle.</h2>
+					
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nibh a erat malesuada luctus. Morbi vestibulum quam ut metus 
+						euismod vitae pellentesque mauris auctor. In suscipit erat sed augue egestas laoreet. Etiam ultricies interdum volutpat. 
+						Vivamus tincidunt, diam in condimentum fermentum, augue mi vestibulum quam, ac adipiscing leo augue sit amet erat. 
+						Donec hendrerit sodales sem dapibus ultricies. Donec mauris nisl, condimentum sed scelerisque quis, laoreet tincidunt nisl. <a href="#">This is a link</a>
+						</p>
+					
+						<h3>This is a h3 subtitle.</h3>
+					
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nibh a erat malesuada luctus. Morbi vestibulum quam ut metus 
+						euismod vitae pellentesque mauris auctor. In suscipit erat sed augue egestas laoreet. Etiam ultricies interdum volutpat. 
+						Vivamus tincidunt, diam in condimentum fermentum, augue mi vestibulum quam, ac adipiscing leo augue sit amet erat. 
+						Donec hendrerit sodales sem dapibus ultricies. Donec mauris nisl, condimentum sed scelerisque quis, laoreet tincidunt nisl. <a href="#">This is a link</a>
+						</p>
+					
+						<h4>This is a h4 subtitle.</h4>
+					
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nibh a erat malesuada luctus. Morbi vestibulum quam ut metus 
+						euismod vitae pellentesque mauris auctor. In suscipit erat sed augue egestas laoreet. Etiam ultricies interdum volutpat. 
+						Vivamus tincidunt, diam in condimentum fermentum, augue mi vestibulum quam, ac adipiscing leo augue sit amet erat. 
+						Donec hendrerit sodales sem dapibus ultricies. Donec mauris nisl, condimentum sed scelerisque quis, laoreet tincidunt nisl. <a href="#">This is a link</a>
+						</p>
+					
+						<h5>This is a h5 subtitle.</h5>
+					
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nibh a erat malesuada luctus. Morbi vestibulum quam ut metus 
+						euismod vitae pellentesque mauris auctor. In suscipit erat sed augue egestas laoreet. Etiam ultricies interdum volutpat. 
+						Vivamus tincidunt, diam in condimentum fermentum, augue mi vestibulum quam, ac adipiscing leo augue sit amet erat. 
+						Donec hendrerit sodales sem dapibus ultricies. Donec mauris nisl, condimentum sed scelerisque quis, laoreet tincidunt nisl. <a href="#">This is a link</a>
+						</p>
+					
+						<h6>This is a h6 subtitle.</h6>
+					
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nibh a erat malesuada luctus. Morbi vestibulum quam ut metus 
+						euismod vitae pellentesque mauris auctor. In suscipit erat sed augue egestas laoreet. Etiam ultricies interdum volutpat. 
+						Vivamus tincidunt, diam in condimentum fermentum, augue mi vestibulum quam, ac adipiscing leo augue sit amet erat. 
+						Donec hendrerit sodales sem dapibus ultricies. Donec mauris nisl, condimentum sed scelerisque quis, laoreet tincidunt nisl. <a href="#">This is a link</a>
+						</p>
+					
+						<div class="clear_fix"></div>
+					</div>
+			</div>
+		</div>
+
+	</body>
+</html>

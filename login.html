@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		
+		<!--[if IE 7]> <meta http-equiv="Page-Enter" content="revealtrans(duration=0.0)" /> <meta http-equiv="Page-Exit" content="revealtrans(duration=0.0)" /> <![endif]-->
+		
+		<title>Backend</title>
+		<link rel="stylesheet" type="text/css" href="/backend/stylesheets/master.css" />
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/backend/stylesheets/ie6.css" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/backend/stylesheets/ie7.css" /><![endif]-->
+		<script src="/backend/javascripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<script src="/backend/javascripts/ckeditor/ckeditor.js" type="text/javascript"></script>
+		<script src="/backend/javascripts/ckeditor/adapters/jquery.js" type="text/javascript"></script>
+		<script src="/backend/javascripts/admin.js" type="text/javascript"></script>
+		
+	</head>
+	<body id="login">
+		
+		
+		
+		<div id="ajax_loading" style="display:none;" >
+			<img src="/backend/images/ajax_loader.gif" alt="Look at this spinner while stuff happens." /><span>Loading...</span>
+		</div>
+		
+		<div id="header_wrapper">
+			<ul id="header_menu">
+				<li class="right on icon login" ><a href="#" ><span>Login</span></a></li>
+			</ul>
+		</div>
+		<div id="container">
+			<div id="content_wrapper">
+				
+					<!-- flash messages -->
+					<div id="flash_messages">
+						<!-- div class="message">This is a default info message.</div>
+						<div class="message ok">This is an ok message.</div>
+						<div class="message error">This is a error.</div>
+						<div class="message warning">This is a warning.</div -->
+					</div>
+					
+					<div class="content" >
+						<h1 class="title">Please Login:</h1>
+						
+						<form class="nice_form" action="#">
+								
+							<div class="input text">
+								<label>Username:</label>
+								<input type="text" />
+							</div>
+							
+							<div class="input text">
+								<label>Password:</label>
+								<input type="text" />
+							</div>
+							
+								
+							<div class="input submit">
+								<input type="submit" value="Submit" />
+							</div>
+								
+							
+						</form>
+						
+					
+					</div>
+			</div>
+		</div>
+	</body>
+</html>

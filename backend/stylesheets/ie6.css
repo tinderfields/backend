@@ -1,0 +1,73 @@
+/***************** layout ****************/
+body{ background-image:url('/backend/images/ie_menu_bg.png'); background-repeat:repeat-y; }
+#content_wrapper, #header_wrapper ul{ width:794px; }
+
+/***************** text ******************/
+.content .title{  background:none; background-color:#eee; }
+
+/********************* header menu *****************/
+#header_wrapper ul .home a span{ background-image:url('/backend/images/home.gif'); width:1px; }
+#header_wrapper ul .logout a span{  background-image:url('/backend/images/logout.gif');  width:1px; }
+#header_wrapper ul .login a span{  background-image:url('/backend/images/login.gif');  width:1px; }
+#header_wrapper ul li a{ height:20px; }
+#header_wrapper ul li a .badge{ border-width:1px; }
+
+#header_wrapper ul .back a span{ width:1px; background-image:url('/backend/images/back.gif'); }
+#header_wrapper ul .forwards a span{ width:1px; background-image:url('/backend/images/forwards.gif'); }
+
+
+#header_menu{  }
+
+
+/***************** main menu *********************/
+#main_menu li .title{ background:none; background-color:#eee; color:#000; font-weight:bold; }
+#main_menu li ul li a{ padding-top:6px; padding-bottom:6px; height:20px; }
+#main_menu li ul li a .badge{ display:inline-block; margin:0 0 0 5px; float:none; }
+#main_menu .icon{ display:none; }
+
+#main_menu li ul li a .badge{ background:none; background-color:#eee; color:#000; border:solid 1px #ccc; }
+
+/***************** flash messages **************/
+
+/**************** nice table ******************/
+.nice_table { width:98%; }
+
+/******************* form elements *******************/
+textarea{ width:260px; height:100px; }
+
+.nice_form .input label{ position:absolute; top:0; left:-130px; display:block; width:120px; text-align:right; }
+
+/* buttons! */
+.button, .input_button{ background:none; background-color:#eee; }
+.button{ position:relative; top:-1px; padding-top:4px; }
+.input_button{ padding-top:6px; padding-bottom:2px; }
+
+
+.input_button:hover, .button:hover{ background-color:#ddd; }
+.input_button:active, .button:active{ background:none; background-color:#ccc; position:relative; }
+
+.submit_button{ background:none; color:#fff; background-color:#415a84; }
+
+.delete{ background-color:#df0202; background-repeat:repeat-x; background-image:url('/backend/images/button_delete_bg.png'); background-position:bottom left; color:#fff; }
+.delete:hover, .delete:focus, .delete:active{ background-color:#ae0000; }
+
+/* icons */
+.content .download_icon span{ left:10px; top:-1px; }
+.content .close_icon span, #fastlook_box .close_icon span{ background-image:url('/backend/images/close.gif'); }
+
+/* undo hidden area stuff */
+.hidden_form_area{ background:#efefef; margin:0; padding:0; overflow:visible; position:relative; margin:0 0 20px 0; padding-top:20px; height:1%; }
+
+.hidden_area_callout{ left:100px; background-image:url('/backend/images/callout.gif'); background-repeat:no-repeat; top:-11px; }
+
+
+.hidden_form_area label, .hidden_form_area p, .hidden_form_area .nice_form .input p{ color:#000; }
+
+/* fastlook */
+#fastlook_box #fastlook_frame{ display:inline; }
+
+/* fany frame */
+.fancy_frame{ position:relative; top:3px; }
+
+/* login */
+#login .content .title{ height:1%; width:540px; }
