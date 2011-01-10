@@ -22,6 +22,7 @@ var app = {
 		message.initialise();
 		confirm_window.initialise();
 		fastlook.initialise();
+		nested_forms.initialise();
 		
 		//extra fancy bits, switch off in settings at top
 		backend.fanciefy_fancy_frames();
@@ -361,6 +362,78 @@ var fastlook = {
 		$('body').css('overflow', 'auto');
 	}
 }
+
+var nested_forms = {
+	initialise: function() {
+				
+		nested_forms_rows = [];
+		nested_forms_rows_button_names = [];
+		
+		$('.nested_forms').each(function(index) {
+			if($(this).attr('id') == ""){ alert('One of your .nested_forms does not have an id, the dynamic form adding will not work without an id.'); }
+			var new_record_row = $(this).find('.new_record_row');			
+			nested_forms_rows[$(this).attr('id')] = new_record_row.clone();			
+			$(this).find('.new_record_row').remove();
+		});
+		
+		
+		$('.add_another').click( function() {			
+			var nested_forms_id = $(this).closest('.nested_forms').attr('id');
+			nested_forms_rows[nested_forms_id].clone().insertBefore('#'+ nested_forms_id + ' .add_another');
+			nested_forms.update_names();
+			nested_forms.update_add_button();
+			return false;
+		});
+		
+		$('.nested_forms .cancel').live('click', function(){
+			var this_row = $(this).closest('.new_record_row');
+			this_row.fadeOut('fast', function(){
+				this_row.remove();
+				nested_forms.update_add_button();
+				nested_forms.update_add_button();
+			});
+			return false;
+		});
+		nested_forms.update_add_button();
+	},
+	
+	update_names: function() {
+		$('.nested_forms').each(function(index) {
+			$('.nested_form_row').each(function(nested_form_row_index) {
+				
+				var this_row = $(this);
+				
+				this_row.find('input').each(function(input_index) {
+					var new_name = $(this).attr('name').replace(/\[+[0-9]+\]/, ('['+ nested_form_row_index +']') );
+					$(this).attr('name', new_name);
+				});
+				
+				this_row.find('select').each(function(input_index) {
+					var new_name = $(this).attr('name').replace(/\[+[0-9]+\]/, ('['+ nested_form_row_index +']') );
+					$(this).attr('name', new_name);
+				});
+				
+				this_row.find('textarea').each(function(input_index) {
+					var new_name = $(this).attr('name').replace(/\[+[0-9]+\]/, ('['+ nested_form_row_index +']') );
+					$(this).attr('name', new_name);
+				});
+				
+			});
+		});
+	},
+	
+	update_add_button: function() {
+		$('.nested_forms').each(function(index) {
+			if($(this).find('.nested_form_row').length > 0){
+				$(this).find('.add_another').text('Add another...');
+			}else{
+				$(this).find('.add_another').text('Click to add...');
+			}
+		});
+	}
+	
+}
+
 
 $(document).ready(function(){
 	app.initialise();
