@@ -276,9 +276,8 @@ option{ background:none; }
 .input_button:hover, .button:hover, .buttons a:hover{ border:1px solid #222; }
 .input_button:active, .button:active, .buttons a:active{ background-image:url('/backend/images/button_bg_down.png'); background-position:top left; border:1px solid #222; }
 
-.submit_button{ background:none; color:#fff; text-shadow:0px 0px 0 #000; background-color:#597693; background-image: -webkit-gradient(linear,left top,left bottom,from(#597693),to(#243450)); background: -moz-linear-gradient(top,#597693,#243450); }
-.submit_button:active{ background-image: -webkit-gradient(linear,left top,left bottom,from(#243450),to(#597693)); background: -moz-linear-gradient(top,#243450,#597693); }
-
+.submit_button { background: -moz-linear-gradient(center top , #218ED6 0%, #1F78D5 100%) repeat scroll 0 0 transparent; border: 1px solid #1A62AE; color: #FFFFFF; text-shadow: -1px -1px 1px #555555; }
+.submit_button:active { background: -moz-linear-gradient(center top , #1F78D5 0%, #218ED6 99%) repeat scroll 0 0 transparent; }
 .submit_button, .submit_button:hover, .submit_button:active, .delete{ border:solid 1px #000; }
 .submit_button:hover, .submit_button:focus{ -moz-box-shadow: 0px 0px 5px #39a7ec; -webkit-box-shadow: 0px 0px 5px #39a7ec; box-shadow: 0px 0px 5px #39a7ec; }
 
@@ -379,6 +378,12 @@ table .fancy_frame_wrapper{ top:0; }
 .nice_form .nested_forms .nested_form_row{ border-bottom:dashed 1px #ccc; margin-bottom:10px; }
 .nice_form .nested_forms .new_note{ padding:0 20px; margin:-11px 0 0 0; }
 .nice_form .nested_forms .actions{ margin:-5px 0 10px 130px; }
+
+/* rails formatting */
+.nav_links{ border-top:solid 1px #ccc; padding:10px 0 0 0; text-align:left; margin-top:40px; }
+.nav_links a, .nav_links a:hover, .nav_links a:active{ font-size:12px; background:none; text-decoration:underline; border:solid 1px #fff; }
+.nav_links a:hover{ background-color:#eee; border:solid 1px #aaa; }
+.nav_links a:active{ background-color:#eee; border:solid 1px #000; }
 
 
 
