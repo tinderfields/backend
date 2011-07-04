@@ -5,7 +5,7 @@
 
 /********************* header menu *****************/
 #header_wrapper ul .home a span{ background-image:url('/backend/images/home.gif'); }
-#header_wrapper ul li a{ height:20px; }
+#header_wrapper ul li a{ height:1%; }
 #header_wrapper ul li a .badge{ border-width:1px; }
 
 
