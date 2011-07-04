@@ -1,16 +1,18 @@
+
+
 /***************** layout ****************/
 body{ background-image:url('/backend/images/ie_menu_bg.png'); background-repeat:repeat-y; }
-#content_wrapper, #header_wrapper ul{ width:794px; }
+#content_wrapper{ width:794px; }
 
 /***************** text ******************/
 .content .title{  background:none; background-color:#eee; }
 
 /********************* header menu *****************/
-#header_wrapper ul .home a span{ background-image:url('/backend/images/home.gif'); width:1px; }
-#header_wrapper ul .logout a span{  background-image:url('/backend/images/logout.gif');  width:1px; }
-#header_wrapper ul .login a span{  background-image:url('/backend/images/login.gif');  width:1px; }
-#header_wrapper ul li a{ height:20px; }
-#header_wrapper ul li a .badge{ border-width:1px; }
+#header_wrapper ul .home a span{ background-image:url('/backend/images/home.gif'); width:1px; display:inline; }
+#header_wrapper ul .logout a span{  background-image:url('/backend/images/logout.gif');  width:1px;  display:inline;}
+#header_wrapper ul .login a span{  background-image:url('/backend/images/login.gif');  width:1px;  display:inline;}
+#header_wrapper ul li a{ height:20px;  display:inline; }
+#header_wrapper ul li a .badge{ border-width:1px;  display:inline; }
 
 #header_wrapper ul .back a span{ width:1px; background-image:url('/backend/images/back.gif'); }
 #header_wrapper ul .forwards a span{ width:1px; background-image:url('/backend/images/forwards.gif'); }
@@ -21,10 +23,10 @@ body{ background-image:url('/backend/images/ie_menu_bg.png'); background-repeat:
 
 /***************** main menu *********************/
 #main_menu li .title{ background:none; background-color:#eee; color:#000; font-weight:bold; }
-#main_menu li ul li a{ padding-top:6px; padding-bottom:6px; height:20px; }
 #main_menu li ul li a .badge{ display:inline-block; margin:0 0 0 5px; float:none; }
 #main_menu .icon{ display:none; }
-
+#main_menu li ul li{ height:1%; }
+#main_menu li ul li a{ height:1%; }
 #main_menu li ul li a .badge{ background:none; background-color:#eee; color:#000; border:solid 1px #ccc; }
 
 /***************** flash messages **************/
@@ -71,3 +73,4 @@ textarea{ width:260px; height:100px; }
 
 /* login */
 #login .content .title{ height:1%; width:540px; }
+
